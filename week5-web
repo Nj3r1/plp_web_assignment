@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>DOM Manipulation Example</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1 id="main-title">Welcome to DOM Manipulation</h1>
+  </header>
+
+  <section>
+    <p id="intro-text">This text will change dynamically.</p>
+    <button id="change-text-btn">Change Text</button>
+  </section>
+
+  <section>
+    <p id="color-text">Watch my color change!</p>
+    <button id="change-color-btn">Change Color</button>
+  </section>
+
+  <section>
+    <button id="toggle-element-btn">Add/Remove Element</button>
+    <div id="element-container"></div>
+  </section>
+
+  <footer>
+    <small>&copy; 2025 Example Corp.</small>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+// Change text content dynamically
+const changeTextBtn = document.getElementById('change-text-btn');
+const introText = document.getElementById('intro-text');
+
+changeTextBtn.addEventListener('click', () => {
+  introText.textContent = 'The text has been changed dynamically!';
+});
+
+// Modify CSS styles via JavaScript
+const changeColorBtn = document.getElementById('change-color-btn');
+const colorText = document.getElementById('color-text');
+
+changeColorBtn.addEventListener('click', () => {
+  // Toggle between red and blue colors
+  if (colorText.style.color === 'red') {
+    colorText.style.color = 'blue';
+  } else {
+    colorText.style.color = 'red';
+  }
+});
+
+// Add or remove an element when a button is clicked
+const toggleElementBtn = document.getElementById('toggle-element-btn');
+const elementContainer = document.getElementById('element-container');
+
+toggleElementBtn.addEventListener('click', () => {
+  const existingElement = document.getElementById('dynamic-element');
+  if (existingElement) {
+    // Remove the element
+    elementContainer.removeChild(existingElement);
+  } else {
+    // Create and add the element
+    const newElement = document.createElement('p');
+    newElement.id = 'dynamic-element';
+    newElement.textContent = 'I was added dynamically!';
+    newElement.style.fontWeight = 'bold';
+    elementContainer.appendChild(newElement);
+  }
+});
