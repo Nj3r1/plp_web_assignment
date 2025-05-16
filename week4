@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Styled Page</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header id="main-header">
+    <h1>Welcome to My Web Page</h1>
+    <p class="subtitle">Styled with External CSS</p>
+  </header>
+
+  <section class="content">
+    <p>This is a simple paragraph to demonstrate CSS styling. We're using margins, paddings, fonts, and borders.</p>
+    <img src="https://via.placeholder.com/300" alt="Sample Image" class="styled-image">
+  </section>
+
+</body>
+</html>
+
+
+
+/* Element selector */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f4f9;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+/* ID selector */
+#main-header {
+  background-color: #4a90e2;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  border-bottom: 5px solid #357ab8;
+}
+
+/* Class selector */
+.subtitle {
+  font-size: 1.2em;
+  margin-top: 10px;
+  color: #e0e0e0;
+}
+
+/* Another class selector */
+.content {
+  margin: 30px;
+  padding: 20px;
+  background-color: #ffffff;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+}
+
+/* Image styling */
+.styled-image {
+  width: 100%;
+  max-width: 300px;
+  border: 3px solid #4a90e2;
+  border-radius: 10px;
+  margin-top: 20px;
+}
