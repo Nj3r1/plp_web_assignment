@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>JS Event Playground</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>🎉 Interactive Playground 🎮</h1>
+
+  <!-- Event Handling Buttons -->
+  <button id="clickBtn">Click Me!</button>
+  <button id="hoverBtn">Hover Over Me!</button>
+  <input type="text" id="keypressInput" placeholder="Type something..." />
+
+  <!-- Bonus: Double-click -->
+  <button id="secretBtn">Double-click Me 🤫</button>
+
+  <!-- Interactive Elements -->
+  <button id="colorBtn">Change My Color</button>
+  <div class="tabs">
+    <button class="tab" data-tab="1">Tab 1</button>
+    <button class="tab" data-tab="2">Tab 2</button>
+    <div class="tab-content" id="tab1">Content for Tab 1</div>
+    <div class="tab-content" id="tab2">Content for Tab 2</div>
+  </div>
+
+  <!-- Image Gallery -->
+  <div class="gallery">
+    <img id="galleryImage" src="https://via.placeholder.com/200" alt="Gallery"/>
+    <button id="nextImage">Next Image</button>
+  </div>
+
+  <!-- Form -->
+  <form id="myForm">
+    <input type="text" id="name" placeholder="Name (required)" required />
+    <input type="email" id="email" placeholder="Email" required />
+    <input type="password" id="password" placeholder="Password (min 8 chars)" required />
+    <span id="feedback"></span>
+    <button type="submit">Submit</button>
+  </form>
+
+  <script src="script.js"></script>
+</body>
+</html>
