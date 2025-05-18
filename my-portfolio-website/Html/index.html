@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Awesome Website - Home</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">MyWebsite</div>
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Welcome to My Awesome Website!</h1>
+            <p>Your one-stop solution for amazing things.</p>
+            <a href="about.html" class="cta-button">Learn More</a>
+        </section>
+
+        <section class="featured-content">
+            <h2>Featured Content</h2>
+            <div class="slider-container">
+                <div class="slide">
+                    <img src="images/placeholder-image1.jpg" alt="Feature 1">
+                    <p>Caption for Feature 1</p>
+                </div>
+                <div class="slide">
+                    <img src="images/placeholder-image2.jpg" alt="Feature 2">
+                    <p>Caption for Feature 2</p>
+                </div>
+                <div class="slide">
+                    <img src="images/placeholder-image3.jpg" alt="Feature 3">
+                    <p>Caption for Feature 3</p>
+                </div>
+                <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+                <button class="next" onclick="changeSlide(1)">&#10095;</button>
+            </div>
+        </section>
+
+        <section class="services">
+            <h2>Our Services</h2>
+            <div class="service-item">
+                <h3>Service One</h3>
+                <p>Description of service one.</p>
+            </div>
+            <div class="service-item">
+                <h3>Service Two</h3>
+                <p>Description of service two.</p>
+            </div>
+            <div class="service-item">
+                <h3>Service Three</h3>
+                <p>Description of service three.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 My Awesome Website. All rights reserved.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

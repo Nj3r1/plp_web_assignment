@@ -1,0 +1,355 @@
+/* General Body Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+/* Header and Navigation */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem 0;
+    position: sticky; /* Makes the header stick to the top */
+    top: 0;
+    z-index: 1000; /* Ensures header is above other content */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+nav .logo {
+    font-size: 1.8em;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1em;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    background-color: #555;
+}
+
+/* Main Content Area */
+main {
+    max-width: 1100px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+section {
+    padding: 20px 0;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+section:last-child {
+    border-bottom: none;
+}
+
+h1, h2, h3 {
+    color: #333;
+    margin-bottom: 15px;
+}
+
+h1 {
+    font-size: 2.5em;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+h3 {
+    font-size: 1.5em;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+/* Hero Section (Home Page) */
+.hero {
+    background-color: #007bff; /* Example primary color */
+    color: #fff;
+    padding: 60px 20px;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.hero h1 {
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #ffc107; /* Example accent color */
+    color: #333;
+    padding: 12px 25px;
+    text-decoration: none;
+    font-size: 1.1em;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #e0a800;
+}
+
+/* Featured Content / Image Slider (Home Page) */
+.featured-content h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.slider-container {
+    position: relative;
+    max-width: 800px; /* Adjust as needed */
+    margin: auto;
+    overflow: hidden; /* Important for slide effect */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.slide {
+    display: none; /* Initially hide all slides */
+    text-align: center;
+}
+
+.slide img {
+    width: 100%;
+    max-height: 400px; /* Adjust as needed */
+    object-fit: cover; /* Ensures image covers the area, might crop */
+    display: block;
+}
+
+.slide p {
+    padding: 10px;
+    background-color: rgba(0,0,0,0.5);
+    color: #fff;
+    margin: 0;
+}
+
+.slide.active-slide {
+    display: block; /* Show active slide */
+}
+
+/* Slider Navigation Buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px; /* Adjust based on padding */
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    background-color: rgba(0,0,0,0.3);
+    border: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+/* Services Section (Home Page) */
+.services {
+    text-align: center;
+}
+
+.service-item {
+    display: inline-block; /* Or use flexbox/grid for more complex layouts */
+    width: 30%; /* Adjust for spacing */
+    margin: 10px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    vertical-align: top; /* Aligns items if they have different heights */
+}
+
+/* About Us Page */
+.about-us {
+    text-align: center;
+}
+.about-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.mission-vision {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px; /* Space between mission and vision boxes */
+    margin-top: 30px;
+}
+
+.mission, .vision {
+    flex-basis: 45%; /* Each takes up roughly half the space */
+    background-color: #eef;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+/* Contact Form (Contact Page) */
+.contact-form-section h1, .contact-form-section p:first-of-type {
+    text-align: center;
+}
+
+#contactForm {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+    width: calc(100% - 22px); /* Account for padding and border */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Includes padding and border in the element's total width and height */
+}
+
+.form-group textarea {
+    resize: vertical; /* Allow vertical resizing */
+}
+
+.error-message {
+    color: red;
+    font-size: 0.9em;
+    display: block; /* So it takes its own line */
+    margin-top: 3px;
+}
+
+#contactForm button[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: #28a745; /* Example success color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
+}
+
+#contactForm button[type="submit"]:hover {
+    background-color: #218838;
+}
+
+#formStatus {
+    text-align: center;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+/* Contact Info (Contact Page) */
+.contact-info {
+    text-align: center;
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #e9ecef;
+    border-radius: 8px;
+}
+
+.contact-info h2 {
+    margin-bottom: 15px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+    margin-top: 30px; /* Ensure space above footer */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+        width: 100%;
+    }
+
+    nav ul li a {
+        display: block; /* Make links take full width */
+        text-align: center
